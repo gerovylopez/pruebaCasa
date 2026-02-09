@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Registrate en Fondo de Bikini</title>
-    <script src="scripts/registro.js" defer></script>
+    <script src="src/Js.js" defer></script>
     <style>
         body {
             background: url("Fondo.jpg") repeat;
@@ -30,7 +30,7 @@
     <div style="padding-top: 5px; margin: auto; background: aqua url(src/img/fondoid.png) no-repeat center ; background-size: contain;; height: 10.8cm; width: 17.2cm; border-radius: 10px; text-align: center;">
         <div style="font-size: 25px;"><span style="font-size: 50px;"> FONDO DE BIKINI</span> <br> IDENTIFICACION OFICIAL</div>
         <div style="font-size: 25px; float: left;  width: 5.7cm; height: 8cm; align-content: end; color: blue; " >EXPIRA 07-05-30<div style="background: url(src/img/patri.jpg) no-repeat center ; background-size: contain;height: 80%; width: 100%;" id="foto" ></div></div>
-        <form id="formRegistro" style="font-size: 20px;float: right; bottom: 0; height: 8cm;  width: 11.4cm; text-align: left;align-content: end">
+        <form id="DNI" style="font-size: 20px;float: right; bottom: 0; height: 8cm;  width: 11.4cm; text-align: left;align-content: end">
             <span id="id"></span>
             <br>
             <input type="text" id="nombre"   required placeholder="nombre" style="font-size: 30px; width: 8cm;">
@@ -52,8 +52,9 @@
             
             <button id="firma" style="float: right;" type="submit">Registrar</button>
         </form>
+        <p id="mensaje"></p>
     </div>
-    <p id="mensaje"></p>
+    
     <script>
     let idd ="ID: "
     for (let i = 0; i < 10; i++) {
