@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrate en Fondo de Bikini</title>
+    <script src="scripts/registro.js" defer></script>
+    <style>
+        body {
+            background: url("Fondo.jpg") repeat;
+            font-family: 'Krabby Patty';
+        }
+        input{
+            background: #00000000;
+            width: 2cm;
+            font-family: 'Krabby Patty';
+            text-transform: uppercase;
+            border: 1px solid #00000062;
+        }
+        @font-face {
+        font-family: 'Krabby Patty';
+        src: url('Krabby\ Patty.ttf') ;
+        font-weight: normal;
+        font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Bienvenido a Fondo de Bikini, por favor registrese aqui</h1>
+    <div style="padding-top: 5px; margin: auto; background: aqua url(src/img/fondoid.png) no-repeat center ; background-size: contain;; height: 10.8cm; width: 17.2cm; border-radius: 10px; text-align: center;">
+        <div style="font-size: 25px;"><span style="font-size: 50px;"> FONDO DE BIKINI</span> <br> IDENTIFICACION OFICIAL</div>
+        <div style="font-size: 25px; float: left;  width: 5.7cm; height: 8cm; align-content: end; color: blue; " >EXPIRA 07-05-30<div style="background: url(src/img/patri.jpg) no-repeat center ; background-size: contain;height: 80%; width: 100%;" id="foto" ></div></div>
+        <form id="formRegistro" style="font-size: 20px;float: right; bottom: 0; height: 8cm;  width: 11.4cm; text-align: left;align-content: end">
+            <span id="id"></span>
+            <br>
+            <input type="text" id="nombre"   required placeholder="nombre" style="font-size: 30px; width: 8cm;">
+            <br>
+            <input type="text" id="apellido" required placeholder="apellido" style="font-size: 30px; width: 8cm;">
+            <br>
+            <input type="text" id="direccion" required placeholder="direccion" style="width: 5cm;">
+            <input type="date" id="fnacimiento" required style=" float: right; width: 3cm;"><label for="fnacimiento"style="float: right; ">NAC:</label>
+            <br>
+            <input type="text" id="pais" required placeholder="pais" style="width: 5cm;">
+            <br>
+            <label for="sex">SEXO:</label><input type="text" id="sex" required style="width: 1cm;"><label for="pelo">PELO:</label><input type="text" id="pelo" required>
+            <br>
+            <label for="ojos">OJOS:</label><input type="text" id="ojos" required>
+            <br>
+            <label for="peso">PESO:</label><input type="number" id="peso" required><label for="peso">kg </label><label for="altura">ALTURA:</label><input type="number" id="altura" required><label for="altura">cm</label>
+            <br>
+            <label for="firma">FIRMA:</label><div style=" height: 1.5cm;  width: 8cm;background:url(src/img/firma.png) no-repeat center ;"></div>
+            
+            <button id="firma" style="float: right;" type="submit">Registrar</button>
+        </form>
+    </div>
+    <p id="mensaje"></p>
+    <script>
+    let idd ="ID: "
+    for (let i = 0; i < 10; i++) {
+      const index = Math.floor(Math.random()*9); ; 
+      idd += index; 
+    } 
+
+        document.getElementById("id").textContent=idd
+    </script>
+</body>
+</html>
